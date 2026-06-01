@@ -62,7 +62,8 @@ try:
     print("\nOrder Successful!")
     print("Order ID:", order["orderId"])
     print("Status:", order["status"])
-
+    print("Executed Qty:", order.get("executedQty", "N/A"))
+    print("Average Price:", order.get("avgPrice", "N/A"))
 except Exception as e:
 
     logger.error(str(e))
